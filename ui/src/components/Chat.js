@@ -16,6 +16,10 @@ import sampleimage from '../images/bg.jpg'
 import phone from '../images/phone.png'
 import video from '../images/video.png'
 import info from '../images/info.png'
+import camara from '../images/camera.png'
+import mic from '../images/mic.png'
+import img from '../images/img.png'
+import emoji from '../images/emoji.png'
 
 
 const Chat = () => {
@@ -184,7 +188,7 @@ const user = {
       <div className="bottom p-5 flex items-center justify-between gap-5 mt-auto border-t border-[#dddddd35]">
         <div className="icons flex gap-5">
           <label htmlFor="file">
-            <img src="/src/images/img.png" alt="" className="w-5 h-5 cursor-pointer" />
+            <img src={img} alt="" className="w-5 h-5 cursor-pointer" />
           </label>
           <input
             type="file"
@@ -192,8 +196,8 @@ const user = {
             className="hidden"
             onChange={handleImg}
           />
-          <img src="/src/images/camera.png" alt="" className="w-5 h-5 cursor-pointer" />
-          <img src="/src/images/mic.png" alt="" className="w-5 h-5 cursor-pointer" />
+          <img src={camara} alt="" className="w-5 h-5 cursor-pointer" />
+          <img src={mic} alt="" className="w-5 h-5 cursor-pointer" />
         </div>
         <input
           type="text"
@@ -209,13 +213,13 @@ const user = {
         />
         <div className="emoji relative">
           <img
-            src="/src/images/emoji.png"
+            src={emoji}
             alt=""
             className="cursor-pointer"
             onClick={() => setOpen((prev) => !prev)}
           />
           <div className="picker absolute bottom-12 left-0">
-            {/* <EmojiPicker open={open} onEmojiClick={handleEmoji} /> */}
+            <EmojiPicker open={open} onEmojiClick={handleEmoji} />
           </div>
         </div>
         <button
